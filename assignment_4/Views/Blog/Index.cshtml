@@ -1,0 +1,12 @@
+@model IEnumerable<assignment_4.Models.Blog>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Blog</h1>
+        @foreach (var blog in Model)
+        {
+            @await Html.PartialAsync("_PostPartial", blog)
+        }
+</div>

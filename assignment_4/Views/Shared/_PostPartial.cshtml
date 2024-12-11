@@ -1,0 +1,9 @@
+@model assignment_4.Models.Blog
+
+<div class="post">
+    <h3>@Model.Title</h3>
+    <p>@Model.Summary</p>
+    <p>@Model.Content</p>
+    <p>Posted by: <span class="Nickname">@Model.Nickname</span></p>
+    <p>Posted on: <span class="Time">@Model.Time.ToString("dd.MM.yyyy")</span></p>
+</div>

@@ -1,0 +1,19 @@
+@model IEnumerable<Guestbook>
+<a class="Link" asp-area="" asp-controller="Guestbook" asp-action="Add">Add Guest</a>
+<br>
+<br>
+<div class="div1">
+    <br/>
+    <h1>Guestbook:</h1>
+    <br/>
+    <ul>
+        @foreach (var guestbook in Model)
+        {
+            <li>
+                @guestbook.Name | @guestbook.Title | @guestbook.Message
+                <a asp-controller="Guestbook"></a>
+            </li>
+        }
+    </ul>
+    <br/>
+</div>
